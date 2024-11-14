@@ -21,22 +21,22 @@ let teamMatch1 = [
     {wonScore: 'NZ-W won by 32 runs', teamImg: './nz-w.jpeg'}
 
 ]
-let teamMatch3 = [
+let teamMatch2 = [
     {img: './Flag-NewZealand.png',teamName: 'New Zealand',  score: '128/9 (20)'},
     {img: './westIndian.jpg',teamName: 'West Indian Women',  score: '120/8 (20)'},
     {wonScore: 'NZ-W won by 8 runs', teamImg: './nz-w.jpeg'}
 ]
-let teamMatch4 = [
+let teamMatch3 = [
     {img: './Flag-NewZealand.png',teamName: 'Australia Women',  score: '134/5 (20)'},
     {img: './africa.jpg',teamName: 'South africa Women',  score: '135/2 (17.2)'},
     {wonScore: 'SA-W won by 8 wickets (16 balls left)', teamImg: './pakistanTeam.webp'}
 ]
-let teamMatch5 = [
+let teamMatch4 = [
     {img: './england.jpg',teamName: 'England Women',  score: '171/7 (20)'},
-    {img: './westIndian.jpg',teamName: 'West Indian women',  score: '144/4 (18)'},,
+    {img: './westIndian.jpg',teamName: 'West Indian women',  score: '144/4 (18)'},
     {wonScore: 'WI-W won by 6 wickets (16 balls left)', teamImg: './wi-w.webp'}
 ]
-let teamMatch2 = [
+let teamMatch5 = [
     {img: './Flag-NewZealand.png',teamName: 'New Zealand Women',  score: '110/6(20)'},
     {img: './pakistan.png',teamName: 'Pakistan Women',  score: '56(11.4)'},
     {wonScore: 'NZ-W won by 564 runs', teamImg: './nz-w.jpeg'}
@@ -68,7 +68,7 @@ matches.map((card) =>(
       ${card.team.map((i) => (
     `<div>
       <div class='row'>
-         <div class='row-center'>
+       <div class='row-center'>
             ${i.img ? `<img class='flag' src=${i.img} alt="Team Image"/>` : ''}
             ${i.teamName ? `<h4>${i.teamName}</h4>` : ''}
         </div>
