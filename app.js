@@ -12,7 +12,26 @@ let sixthMatchDate = new Date('13 October 2024').toLocaleDateString('en-US', opt
 const Matches = function(stage, date, team){
     this.stage = stage
     this.date = date
-    this.matchTeam = teamMatch1
+    this.team = team
+//     this.images = []
+//     this.heading = []
+// console.log(this.heading);
+
+//     for (var i of team) {
+//         if(i && i['teamName']){
+//         this.heading.push(i['teamName']);
+//         }
+        
+        
+//         if (i && i['img']) {
+//             let imgElem = new Image();
+//             let imgSrc = imgElem.src = i['img'];
+//             this.images.push(imgSrc);
+            
+//         }else{
+//             console.log('not found');
+//         }
+//     }
 }
 
 let teamMatch1 = [
@@ -42,7 +61,7 @@ let teamMatch2 = [
     {wonScore: 'NZ-W won by 564 runs', teamImg: './nz-w.jpeg'}
 ]
 let teamMatch6 = [
-    {img: './Flag-NewZealand.png',teamName: 'Australia Women', score: '151/8(20)'},
+    {img: './Flag-NewZealand.png', teamName: 'Australia Women', score: '151/8(20)'},
     {img: './india.webp',teamName: 'India women',  score: '142/9(20)'},
     {wonScore: 'AU-W won by 9 runs', teamImg: './pakistanTeam.webp'}
 ]
@@ -57,8 +76,32 @@ new Matches('group-stage', sixthMatchDate, teamMatch6),
 ]
 
 matches.map((card) =>(
-    main.innerHTML = 
-    `<div class='card'>
-
+    main.innerHTML += 
+`<div class='card'>
+    <div class='row'>
+        <h4>${card.stage}</h4>
+        <h4>${card.date}</h4>
+    </div>
+     <div>
+     <div>
+      ${card.team.map((i) => (
+    `<div>
+      <div class='row'>
+         <div class='row-center'>
+            ${i.img ? `<img class='flag' src=${i.img} alt="Team Image"/>` : ''}
+            ${i.teamName ? `<h4>${i.teamName}</h4>` : ''}
+        </div>
+        ${i.score ? ` <p>${i.score}</p>` : ''}
+      </div>
+         <div class='row'>
+            ${i.wonScore ? ` <p>${i.wonScore}</p>` : ''}
+            ${i.teamImg ? `<img class='flag' src=${i.teamImg} alt="Team Image"/>` : ''}
+        </div>
     </div>`
+      ))};
+
+      </div>
+    </div>
+
+</div>`
 ))
