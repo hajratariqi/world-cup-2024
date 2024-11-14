@@ -13,25 +13,6 @@ const Matches = function(stage, date, team){
     this.stage = stage
     this.date = date
     this.team = team
-//     this.images = []
-//     this.heading = []
-// console.log(this.heading);
-
-//     for (var i of team) {
-//         if(i && i['teamName']){
-//         this.heading.push(i['teamName']);
-//         }
-        
-        
-//         if (i && i['img']) {
-//             let imgElem = new Image();
-//             let imgSrc = imgElem.src = i['img'];
-//             this.images.push(imgSrc);
-            
-//         }else{
-//             console.log('not found');
-//         }
-//     }
 }
 
 let teamMatch1 = [
