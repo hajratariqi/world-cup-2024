@@ -98,7 +98,7 @@ matches.map((card) =>(
             ${i.teamImg ? `<img class='flag' src=${i.teamImg} alt="Team Image"/>` : ''}
         </div>
     </div>`
-      ))};
+      )).join('')}
 
       </div>
     </div>
